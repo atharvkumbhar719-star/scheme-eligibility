@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Scheme Eligibility Test</title>
+</head>
+<body>
+  <h2>Check Your Eligible Schemes</h2>
+  <form id="eligibilityForm">
+    <label>Age: <input type="number" id="age" required></label><br><br>
+    <label>Annual Income (Rs): <input type="number" id="income" required></label><br><br>
+    <label>Occupation: <input type="text" id="occupation" placeholder="farmer/student/any" required></label><br><br>
+    <label>Gender: <input type="text" id="gender" placeholder="male/female"></label><br><br>
+    <button type="submit">Check Eligibility</button>
+  </form>
+
+  <div id="results"></div>
+
+  <script>
+    document.getElementById('eligibilityForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const age = document.getElementById('age').value;
+      const income = document.getElementById('income').value;
+      const occupation = document.getElementById('occupation').value;
+      const gender = document.getElementById('gender').value;
+
+      const response = await fetch('http://localhost:5000/api/check-eligibility', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ age: Number(age), income: Number(income), occupation, gender })
+      });
+
+      const data = await response.json();
+
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = `<h3>Eligible Schemes: ${data.totalEligible}</h3>`;
+
+      data.schemes.forEach((scheme) => {
+        resultsDiv.innerHTML += `
+          <div style="border:1px solid #ccc; padding:10px; margin:10px 0;">
+            <h4>${scheme.name}</h4>
+            <p><b>Category:</b> ${scheme.category}</p>
+            <p>${scheme.description}</p>
+            <p><b>Documents needed:</b> ${scheme.documents.join(', ')}</p>
+          </div>
+        `;
+      });
+    });
+  </script>
+</body>
+</html>
