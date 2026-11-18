@@ -1,63 +1,7 @@
 [
-  {
-    "id": "pm-kisan",
-    "name": "PM-KISAN",
-    "category": "Agriculture",
-    "eligibility": {
-      "occupation": ["farmer"],
-      "minIncome": 0,
-      "maxIncome": 200000
-    },
-    "documents": ["Aadhaar Card", "Land Records", "Bank Passbook"],
-    "description": "Income support of Rs. 6000 per year for landholding farmer families."
-  },
-  {
-    "id": "ayushman-bharat",
-    "name": "Ayushman Bharat (PM-JAY)",
-    "category": "Healthcare",
-    "eligibility": {
-      "occupation": ["any"],
-      "minIncome": 0,
-      "maxIncome": 250000
-    },
-    "documents": ["Aadhaar Card", "Ration Card", "Income Certificate"],
-    "description": "Health insurance cover of Rs. 5 lakh per family per year."
-  },
-  {
-    "id": "pmay",
-    "name": "PM Awas Yojana (PMAY)",
-    "category": "Housing",
-    "eligibility": {
-      "occupation": ["any"],
-      "minIncome": 0,
-      "maxIncome": 300000
-    },
-    "documents": ["Aadhaar Card", "Income Certificate", "Bank Account Details"],
-    "description": "Financial assistance for construction of pucca house."
-  },
-  {
-    "id": "sukanya-samriddhi",
-    "name": "Sukanya Samriddhi Yojana",
-    "category": "Women & Child Welfare",
-    "eligibility": {
-      "gender": ["female"],
-      "occupation": ["any"],
-      "minIncome": 0,
-      "maxIncome": 1000000
-    },
-    "documents": ["Birth Certificate of Girl Child", "Aadhaar Card", "Address Proof"],
-    "description": "Savings scheme for girl child's education and marriage expenses."
-  },
-  {
-    "id": "national-scholarship",
-    "name": "National Scholarship Portal",
-    "category": "Education",
-    "eligibility": {
-      "occupation": ["student"],
-      "minIncome": 0,
-      "maxIncome": 250000
-    },
-    "documents": ["Aadhaar Card", "Income Certificate", "Marksheet"],
-    "description": "Scholarship support for students from economically weaker sections."
-  }
+  {"id":"pm-kisan","name":"PM-KISAN","category":"Agriculture","eligibility":{"occupation":["farmer"],"minIncome":0,"maxIncome":200000},"documents":["Aadhaar Card","Land Records","Bank Passbook"],"description":"Income support of Rs. 6000 per year for landholding farmer families."},
+  {"id":"ayushman-bharat","name":"Ayushman Bharat (PM-JAY)","category":"Healthcare","eligibility":{"occupation":["any"],"minIncome":0,"maxIncome":250000},"documents":["Aadhaar Card","Ration Card","Income Certificate"],"description":"Health insurance cover of Rs. 5 lakh per family per year."},
+  {"id":"pmay","name":"PM Awas Yojana (PMAY)","category":"Housing","eligibility":{"occupation":["any"],"minIncome":0,"maxIncome":300000},"documents":["Aadhaar Card","Income Certificate","Bank Account Details"],"description":"Financial assistance for construction of pucca house."},
+  {"id":"sukanya-samriddhi","name":"Sukanya Samriddhi Yojana","category":"Women & Child Welfare","eligibility":{"gender":["female"],"occupation":["any"],"minIncome":0,"maxIncome":1000000},"documents":["Birth Certificate of Girl Child","Aadhaar Card","Address Proof"],"description":"Savings scheme for girl child's education and marriage expenses."},
+  {"id":"national-scholarship","name":"National Scholarship Portal","category":"Education","eligibility":{"occupation":["student"],"minIncome":0,"maxIncome":250000},"documents":["Aadhaar Card","Income Certificate","Marksheet"],"description":"Scholarship support for students from economically weaker sections."}
 ]
